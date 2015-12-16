@@ -42,7 +42,7 @@ different tasks of this lab.
     * [Vagrant](https://www.vagrantup.com/)
 
 2. Clone the following repository to your machine:
-   <https://github.com/SoftEng-HEIGVD/Teaching-HEIGVD-AIT-2015-Labo-04>
+   <https://github.com/SoftEng-HEIGVD/Teaching-HEIGVD-AIT-2015-Lab-Virtualization>
 
 3. Once you have installed everything, start the Vagrant VM from the
    project folder with the following command:
@@ -139,6 +139,44 @@ machines and software containers.
    virtual file system appear to the container (tip: use `docker exec
    -ti <containerid> bash` to login to the running container). How do
    you explain?
+
+### Task 4 (optional): Compare disk performance
+
+If your host runs Linux you can use the bonnie++ disk benchmarking
+tool to compare disk performance on host and guest.
+
+The [bonnie++ tool](http://www.coker.com.au/bonnie++/) is a benchmark
+for file system I/O performance. It measures the speed of sequential
+file reads and writes as well as the speed with which a big number of
+files can be created, read and deleted.
+
+On host, guest and container run bonnie++ as follows:
+
+* Download the source code:
+
+        wget http://www.coker.com.au/bonnie++/experimental/bonnie++-1.97.tgz
+
+* Unpack the archive and compile:
+
+        tar xzf bonnie++-1.97.tgz
+        cd bonnie++-1.97
+        ./configure
+        make
+
+* Run the benchmarks:
+
+        ./bonnie++ -s 2G -n 128
+
+* Write down the three measurements for __Random Create__ of files:
+
+    * Create (in files/sec)
+    * Read (in files/sec)
+    * Delete (in files/sec)
+
+After you have completed the measurements compare the values. Use the
+host as the baseline and express the performance of guest and
+container as percentage of the host.
+
 
 ### Lab deliverables
 
