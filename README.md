@@ -1,6 +1,3 @@
-title: Lab 04 - Virtualization
----
-
 ## Lab 04 - Virtualization
 
 
@@ -10,6 +7,8 @@ title: Lab 04 - Virtualization
 
 * Measure the impact of virtualization and containerization on
   performance
+
+* Compare the storage footprint of virtual machines and containers
 
 
 #### Overview
@@ -25,8 +24,10 @@ performance of three environments:
 * the software container.
 
 The benchmarking tool (Geekbench) is platform-independent, it runs on
-Linux, Windows and Mac OS X. If you are curious you can run it also on
-your smartphone and compare the results.
+Linux, Windows and Mac OS X and enables the comparison of the
+different platforms. If you are curious you can run it even on
+smartphones and tablets (iOS and Android) to get a feeling for their
+relative performance.
 
 
 ### Task 1: Create virtual machine and software container
